@@ -8,6 +8,7 @@ public class App {
 
         User user = context.getBean("user", User.class);
         System.out.println(user);
+
         context.close();
     }
 }
