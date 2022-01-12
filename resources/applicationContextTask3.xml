@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:userApp.properties"/>
+
+    <bean id="userAddress"
+          class="org.example.Task3.Address">
+    </bean>
+
+    <bean id="user"
+          class="org.example.Task3.User">
+        <constructor-arg name="address" ref="userAddress"></constructor-arg>
+        <constructor-arg name="firstName" value="${user.firstName}"></constructor-arg>
+        <constructor-arg name="lastName" value="${user.lastName}"></constructor-arg>
+    </bean>
+</beans>
