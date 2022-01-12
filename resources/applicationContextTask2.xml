@@ -24,9 +24,4 @@
             </list>
         </property>
     </bean>
-
-    <!--    <bean id="myPerson"-->
-    <!--          class="edu.itstep.ex1.Person">-->
-    <!--        <constructor-arg ref="myPet"/>-->
-    <!--    </bean>-->
 </beans>
